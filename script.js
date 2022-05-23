@@ -5,10 +5,9 @@ const recipeCloseBtn = document.getElementById('close');
 
 searchForm.addEventListener('submit', getMeals);
 cardInfo.addEventListener('click', getMealRecipe);
-recipeCloseBtn.addEventListener('click', ()=> {
-    console.log('closing')
-    mealDetailsContent.parentElement.classList.remove('show');
-});
+//recipeCloseBtn.addEventListener('click', ()=> {
+//    mealDetailsContent.parentElement.classList.remove('show');
+//});
 window.addEventListener('click', (event) => {
     if(event.target.classList.contains('show')) {
         mealDetailsContent.parentElement.classList.remove('show');
@@ -41,6 +40,7 @@ function getMeals(event) {
                 </div>
                 `;
             });
+            cardInfo.classList.remove('notFound');
         }
         else {
             html = "No results";
